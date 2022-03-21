@@ -1,11 +1,11 @@
-import React from "react";
+
 import styled from "styled-components";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
-const ImgSlider = () => {
-  const settings = {
+const ImgSlider = (props) => {
+  let settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -16,10 +16,27 @@ const ImgSlider = () => {
   return (
     <Carousel {...settings}>
       <Wrap>
-        <img src="/images/slider-badging.jpg" />
+        <a>
+          <img src="/images/slider-badging.jpg" alt="" />
+        </a>
       </Wrap>
+
       <Wrap>
-        <img src="/images/slider-badag.jpg" />
+        <a>
+          <img src="/images/slider-scale.jpg" alt="" />
+        </a>
+      </Wrap>
+
+      <Wrap>
+        <a>
+          <img src="/images/slider-badag.jpg" alt="" />
+        </a>
+      </Wrap>
+
+      <Wrap>
+        <a>
+          <img src="/images/slider-scales.jpg" alt="" />
+        </a>
       </Wrap>
     </Carousel>
   );
